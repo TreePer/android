@@ -1,0 +1,60 @@
+package com.example.middletest;
+
+import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.RatingBar;
+import android.widget.TextView;
+
+import java.util.ArrayList;
+
+public class CustomAdapter extends BaseAdapter {
+    private ArrayList<listItem> listItem =new ArrayList<listItem>();
+
+    @Override
+    public int getCount() {
+        return listItem.size();
+    }
+
+    @Override
+    public Object getItem(int position) {
+        return listItem.get(position);
+    }
+
+    @Override
+    public long getItemId(int position) {
+        return 0;
+    }
+
+    @Override
+    public View getView(int position, View convertView, ViewGroup parent) {
+        final int pos = position;
+        final Context context = parent.getContext();
+
+        if (convertView == null) {
+            LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            convertView = inflater.inflate(R.layout.result, parent, false);
+        }
+
+        TextView txt = (TextView) convertView.findViewById(R.id.txt1);
+        RatingBar rating = (RatingBar) convertView.findViewById(R.id.rating1);
+
+        listItem item = listItem.get(position);
+
+        txt.setText(item.getName());
+        rating.setRating(item.getRating());
+
+        return convertView;
+    }
+
+    void addItem(String txt, Float rating) {
+        listItem item = new listItem();
+
+        item.setName(txt);
+        item.setRating(rating);
+
+        listItem.add(item);
+    }
+}
