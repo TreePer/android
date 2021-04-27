@@ -1,0 +1,81 @@
+package com.example.middleex;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+
+public class Calc extends AppCompatActivity {
+    Button plus, min, sup, div;
+    EditText num1, num2;
+    String x, y;
+    Integer sum;
+    TextView res;
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.calc);
+
+        plus = (Button)findViewById(R.id.btnPlus);
+        min = (Button)findViewById(R.id.btnMin);
+        div = (Button)findViewById(R.id.btnDiv);
+        sup = (Button)findViewById(R.id.btnSup);
+        num1 = (EditText)findViewById(R.id.num1);
+        num2 = (EditText)findViewById(R.id.num2);
+        res = (TextView)findViewById(R.id.txtRes);
+
+        plus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                x = num1.getText().toString();
+                y = num2.getText().toString();
+                sum = Integer.parseInt(x) + Integer.parseInt(y);
+                res.setText("계산결과 : " + sum);
+                Toast.makeText(getApplicationContext(), "계산결과 : " + sum, Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        min.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                x = num1.getText().toString();
+                y = num2.getText().toString();
+                sum = Integer.parseInt(x) - Integer.parseInt(y);
+                res.setText("계산결과 : " + sum);
+                Toast.makeText(getApplicationContext(), "계산결과 : " + sum, Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        div.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Double sum;
+                x = num1.getText().toString();
+                y = num2.getText().toString();
+                sum = Double.parseDouble(x) / Double.parseDouble(y);
+                res.setText("계산결과 : " + sum);
+                Toast.makeText(getApplicationContext(), "계산결과 : " + sum, Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        sup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                x = num1.getText().toString();
+                y = num2.getText().toString();
+                sum = Integer.parseInt(x) * Integer.parseInt(y);
+                res.setText("계산결과 : " + sum);
+                Toast.makeText(getApplicationContext(), "계산결과 : " + sum, Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
+    }
+}
