@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/txtMypageId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ID" />
+
+    <EditText
+        android:id="@+id/txtMypagePwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:hint="pwd" />
+
+    <EditText
+        android:id="@+id/txtMypageName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name" />
+
+    <TextView
+        android:id="@+id/txtMypageCom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Company" />
+
+    <Button
+        android:id="@+id/btnMypageSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="수정" />
+    <Button
+        android:id="@+id/btnMypageDelete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="회원탈퇴" />
+</LinearLayout>

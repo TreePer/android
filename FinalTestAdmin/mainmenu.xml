@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btnSchedule"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="스케쥴등록" />
+    <Button
+        android:id="@+id/btnSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="근태확인" />
+    <Button
+        android:id="@+id/btnManager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="사원관리" />
+    <Button
+        android:id="@+id/btnMypage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="마이페이지" />
+
+    <Button
+        android:id="@+id/btnLogout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="로그아웃" />
+
+</LinearLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txtUserId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ID" />
+
+    <EditText
+        android:id="@+id/txtUserPwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:hint="pwd" />
+
+    <EditText
+        android:id="@+id/txtUserName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name" />
+
+    <TextView
+        android:id="@+id/txtUserCom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Company" />
+
+
+    <EditText
+        android:id="@+id/txtUserTeam"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Team" />
+
+    <Switch
+        android:id="@+id/switchUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="관리자" />
+
+    <Button
+        android:id="@+id/btnUserSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="수정" />
+
+
+</LinearLayout>
